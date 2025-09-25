@@ -44,10 +44,11 @@ header a:active {
 
 
 .hero-post {
-    background-image: url("images/article-image-hero.png");
+    background-image: url("../images/article-image-hero.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: end;
