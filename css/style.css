@@ -1,0 +1,238 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Source sans 3", serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1em;
+}
+
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover,
+header a:active {
+   color: #252525;
+   transform: scale(1.2); 
+}
+
+.hero-text, .hero-date, .hero-title {
+    margin: 0.3em 0;
+}
+
+/* Hero Post */
+
+.hero-post-link{
+    color: white;
+}
+
+.hero-post {
+    background-image: url("images/article-image-hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    padding: 1.5rem;
+    min-height: 18.31em;
+    font-size: 1.5em;
+    gap: 0.4em;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.hero-post:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.date, .blog-date {
+    font-size: 1.2rem;
+}
+
+.blog-title {
+    font-size: 1.75rem;
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.blog-date {
+    margin-top: 1em;
+}
+
+.blog-title {
+    margin-bottom: 0;
+}
+
+.blogs-grid-container{
+    display: grid;
+    grid-template-columns: 1em 1fr 1em;
+    grid-template-areas: 
+        ".... .... ...."
+        ".... b1 ...." 
+        ".... b2 ...."
+        ".... b3 ...."
+        ".... b4 ...."
+        ".... b5 ...."
+        ".... b6 ....";
+        gap: 1em 0;
+}
+
+.hero-post-link {
+    grid-area: hp;
+}
+
+.blog-one {
+    grid-area: b1;
+}
+
+.blog-two {
+    grid-area: b2;
+}
+
+.blog-three {
+    grid-area: b3;
+}
+
+.blog-four {
+    grid-area: b4;
+}
+
+.blog-five {
+    grid-area: b5;
+}
+
+.blog-six {
+    grid-area: b6;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hp"
+        "b1"
+        "b2"
+        "b3"
+        "b4"
+        "b5"
+        "b6";
+}
+
+/* article.html */
+
+.recent-posts {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.full-article {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em
+}
+
+/* aboutme.html */
+
+.about-me-title {
+    font-size: 2em;
+}
+
+.about-me-section {
+   display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em;
+    font-size: 1.5rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 650px){
+    .blogs-grid-container {
+        display: grid;
+        grid-template-columns: 1em repeat(3, 1fr) 1em;
+        grid-template-areas:
+        ".... .... .... .... ...." 
+        ".... b1 b2 b3 ...."
+        ".... b4 b5 b6 ....";
+        gap: 2em ;
+    }
+    
+    nav {
+    font-size: 1.5em;
+}
+
+.hero-post {
+    font-size: 2rem;
+}
+
+.blogs {
+    font-size: 2rem;
+}
+
+footer {
+    font-size: 2em;
+}
+
+.about-me-section {
+    font-size: 2rem;
+}
+
+.about-me-section {
+   display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-left: 1em;
+    margin-right: 1em 
+}
+
+.full-article {
+    font-size: 2rem;
+}
+
+.recent-posts {
+    font-size: 2rem;
+}
+
+}
+
